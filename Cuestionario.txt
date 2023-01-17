@@ -1,0 +1,90 @@
+Instrucciones
+Contestar las siguientes preguntas:
+
+1. CMS
+
+a. ¿Qué tecnologías de frontend usaras y por qué?
+Usare Angular por que es un framework modular, y escalable el cual si es necesario que cresca mas 
+el proyecto se podran anexar mas modulos sin ningun problema, tambien es facil crear rutas y dialogos 
+para complementar mas esta app
+
+b. ¿Qué funcionalidades de seguridad puedes implementar para prevenir
+accesos de personas no autorizadas?
+Desde el backend se puede utilizar JSON WEB TOKEN para asi tener un token de cada session y resguardar 
+la informacion de casa usuario
+
+c. ¿Qué módulos/páginas serán necesarios para poder gestionar todo el
+contenido mencionado en la descripción del proyecto? Ejemplo: Una página
+con una tabla de los videojuegos registrados.
+Solo un modulo de administrador para el manejo de la informacion de los videojuegos
+
+2. API
+
+a. ¿Qué tecnologías de backend usaras y por qué?
+Utilizaria nodejs con expressjs para el desarrollo de esta por que esta basado en javascript
+lo cual su entorno de ejecucion y con expressjs la cual nos ayuda a ahorrar el codigo para 
+el desarrollo de la misma.
+
+b. ¿Qué métodos de seguridad puedes implementar para prevenir accesos de
+personas no autorizadas y filtración de datos secretos?
+verificar que el token siempre sea valido y que con cada request hecho se verifique el token
+si no es valido hacerle logout y mandarlo al login inmediatamente, no permitir hacer ninguna 
+funcion sin que pase primero a verificar el token y darle un tiempo limite a cada session.
+
+c. ¿Qué servicios web serán necesarios para poder manejar la comunicación
+de todos los datos mencionados en la descripción del proyecto? Ejemplo:
+Un servicio que crea una nueva opción de consola.
+un crud donde se pueda dar de alta, editar y eliminar, ya sea desde el administrador o tambien 
+el mismo usuario pueda hacerlo sin problema dependiendo los requerimientos.
+
+3. ¿Qué es JWT y por qué es importante usarlo o alguna tecnología equivalente?
+JWT es una cadena de texto la cual tiene tres partes codificada en base64 esta normalmente se utiliza 
+para protejer la informacion de un usuario y que no existan vulnerabilidades con esta firma o token 
+podemos verificar si es el usuario que se esta intentando acceder. es importante por que asi podemos
+validar cierta informacion pertinente segura de invulnerabilidades.
+
+4. ¿Qué clase de servidor es requerido para la tecnología que elegiste?
+servidor web
+
+5. Describir a detalle los servicios de API que desarrollarías y el flujo para recuperar
+la contraseña de un usuario que la solicita desde la App.
+se desarrollaria un controlador y una ruta de gets y posts para obtener la data como para editarla o 
+eliminar
+
+para recuperar la contraseña crearia un modulo donde le pediria al usuario su correo y al validarlo 
+le haria envio de su contraseña al correo que esta guardado en la aplicación y asi no tener ninguna filtracion
+
+
+6. ¿Si estás trabajando este proyecto en paralelo con un desarrollador de la
+aplicación, debes darle prioridad al desarrollo del CMS o de la API? ¿Por qué?
+Se le daria prioridad a ambas partes debido a que todo esta correlacionado por lo tanto es importante
+desarrollar ambas partes pero primero intentaria desarrollar la API para checar que todos los datos fluyan de 
+manera correcta y despues lograr plantearlo en el CMS.
+
+
+7. ¿Qué tablas o colecciones crearás para la base de datos de este proyecto?
+Usuarios, videojuegos, tabla de relacion con los videojuegos y los usuarios.
+
+8. ¿Cómo mantendrás tu documentación de API constantemente actualizada y
+accesible para el resto del equipo de desarrollo?
+Documentando cada parte que se va desarrollando tanto documentar al finalizar de cada session de la Api
+
+
+9. Describe el proceso de hacer el “deployment” de la API y CMS en un web server
+tomando en cuenta las tecnologías que elegiste en los puntos 1 y 2.
+de lado del API se instala el paquete NPM apiconnect-collective-member para los hosts de destino de linux
+se tiene que registrar un usuario en un archivo xml.
+Añadir la característica scalingController en el archivo server xml del controlador.
+La característica scalingController es necesaria para los servidores Node.js que forman parte de un colectivo.
+Asegurarse que el archivo server.xml con tenga sentencias que definan variables de desplieque.
+Registrar el host en el cual desea instalar un servidor Node.js con el controlador colectivo.
+
+De lado del CMS 
+hacer un ngbuild de la aplicacion una vez teniendo el dist de la aplicacion subir esto al servidor con git o a su vez poner esta carpeta
+donde le corresponda en el server.
+
+10. Crea un diagrama de flujo donde muestres la comunicación entre la API, CMS, y
+App. Es importante que claramente se pueda ver en qué dirección se envía/recibe
+información así como el tipo de información que se está representando. (Puedes
+usar cualquier herramienta para crear el diagrama e insertarlo como imagen en la
+sección de respuestas)
