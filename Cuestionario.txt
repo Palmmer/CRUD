@@ -88,3 +88,5 @@ App. Es importante que claramente se pueda ver en qué dirección se envía/reci
 información así como el tipo de información que se está representando. (Puedes
 usar cualquier herramienta para crear el diagrama e insertarlo como imagen en la
 sección de respuestas)
+
+Gracias
